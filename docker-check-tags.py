@@ -121,7 +121,11 @@ def begins_with_word(s):
 
 
 def find_newer(what):
-    version = what.split(':')[1]
+    try:
+        version = what.split(':')[1]
+    except IndexError:
+        # fail early if no version was passed
+        return []
 
     modifier = re.sub(r'[^a-z]', '', version)
 
