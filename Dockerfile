@@ -1,4 +1,4 @@
-ARG BASE=python:3.7.4-alpine3.10
+ARG BASE=python:3.8.1-alpine3.11
 FROM ${BASE}
 
 COPY docker-check-tags.py /
